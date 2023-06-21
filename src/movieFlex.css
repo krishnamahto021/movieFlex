@@ -1,0 +1,124 @@
+.movie-container{
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    margin: 40px 0 0;
+    padding: 20px 0 28px;
+}
+
+.movie-container .left{
+    display: flex;
+    justify-content: space-around;
+}
+
+.poster{
+    width:10rem;
+    height:10rem;
+    margin: 0.1rem;
+    padding: 0.5rem;
+}
+
+
+
+.movie-container .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+}
+
+#movie-title{
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+
+#movie-plot{
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+#movie-price{
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+#movie-rating{
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+#star-minus{
+    margin-right: 0.3rem;
+    width: 10px;
+    height: 10px;
+}
+
+#star-plus{
+    margin-left: 0.3rem;
+    width: 10px;
+    height:10px;
+
+}
+
+#star-img{
+    width: 20px;
+    height: 20px;
+}
+
+.movie-container .footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating{
+    margin-right: 0.5rem;
+}
+
+.starcount{
+    margin-left:30rem;
+    margin-right: 40rem;
+}
+
+.favourite{
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.buy{
+    margin-left: 4rem;
+}
+
+#fav-btn{
+    background-color: #1877f2;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    line-height: 40px;
+    padding: 0 16px;
+    width: 203px;
+    display: block;
+    margin-top: 0.8rem;
+    color: white;
+    font-weight: bolder;
+}
+
+#buy-btn{
+    background-color: #1877f2;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    line-height: 40px;
+    padding: 0 16px;
+    width: 70px;
+    display: block;
+    margin-top: 0.8rem;
+    color: white;
+    font-weight: bolder;
+}
+
