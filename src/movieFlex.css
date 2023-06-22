@@ -70,6 +70,10 @@
     height: 20px;
 }
 
+#star-count{
+    margin-left: 0.9rem;
+}
+
 .movie-container .footer{
     display: flex;
     justify-content: space-between;
@@ -91,7 +95,7 @@
 }
 
 .buy{
-    margin-left: 4rem;
+    margin-left: 2.8rem;
 }
 
 #fav-btn{
