@@ -1,75 +1,76 @@
 import { Component } from "react";
 import "./movieFlex.css";
 class Movie extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      movieTitle: "The avengers",
-      moviePlot:
-        "The remaining Avengers team up to reverse the devastating effects of Thanos snap and restore balance to the universe",
-      moviePrice: 99,
-      movieRating: 4.8,
-      movieStarCount: 4,
-    };
-  }
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     movieTitle: "The avengers",
+  //     moviePlot:
+  //       "The remaining Avengers team up to reverse the devastating effects of Thanos snap and restore balance to the universe",
+  //     moviePrice: 99,
+  //     movieRating: 4.8,
+  //     movieStarCount: 4,
+  //   };
+  // }
 
-  increaseStar = () =>{
-    if(this.state.movieStarCount >= 5){
-        return;
-    }
-    this.setState((prevState)=>{
-        return{
-        movieStarCount : prevState.movieStarCount + 0.5
-        }
-    })
-  }
+  // increaseStar = () =>{
+  //   if(this.state.movieStarCount >= 5){
+  //       return;
+  //   }
+  //   this.setState((prevState)=>{
+  //       return{
+  //       movieStarCount : prevState.movieStarCount + 0.5
+  //       }
+  //   })
+  // }
 
-  decreaseStar = () => {
-    if(this.state.movieStarCount <= 0)
-    return;
+  // decreaseStar = () => {
+  //   if(this.state.movieStarCount <= 0)
+  //   return;
 
-    this.setState((prevState)=>{
-        return{
-            movieStarCount:prevState.movieStarCount - 0.5
-        }
-    })
-  }
+  //   this.setState((prevState)=>{
+  //       return{
+  //           movieStarCount:prevState.movieStarCount - 0.5
+  //       }
+  //   })
+  // }
 
 
 
 
   render() {
+    const { movie } = this.props;
     return (
       <>
         <div className="movie-list">
           <div className="movie-container">
             <div className="left">
               <img
-                src="https://m.media-amazon.com/images/I/91zzAMkVCUL._AC_UF1000,1000_QL80_.jpg"
+                src={movie.img}
                 alt="movie-poster"
                 className="poster"
               />
             </div>
             <div className="right">
               <div className="title">
-                <span id="movie-title">{this.state.movieTitle}</span>
+                <span id="movie-title">{movie.movieTitle}</span>
               </div>
               <div className="plot">
-                <span id="movie-plot">{this.state.moviePlot}</span>
+                <span id="movie-plot">{movie.moviePlot}</span>
               </div>
               <div className="price">
-                <span id="movie-price">Rs.{this.state.moviePrice}</span>
+                <span id="movie-price">Rs.{movie.moviePrice}</span>
               </div>
 
               <div className="footer">
                 <div className="rating">
-                  <span id="movie-rating">{this.state.movieRating}</span>
+                  <span id="movie-rating">{movie.movieRating}</span>
                 </div>
                 <div className="starcount">
                   <img
-                    src="https://cdn-icons-png.flaticon.com/128/43/43625.png"
+                    src='https://cdn-icons-png.flaticon.com/128/43/43625.png'
                     alt="starminus"
-                    id="star-minus" onClick={this.decreaseStar}
+                    id="star-minus" 
                   />
                   <img
                     src="
@@ -80,9 +81,9 @@ class Movie extends Component {
                   <img
                     src="https://cdn-icons-png.flaticon.com/128/748/748113.png"
                     alt="starplus"
-                    id="star-plus" onClick={this.increaseStar}
+                    id="star-plus" 
                   />
-                  <span id="star-count">{this.state.movieStarCount}</span>
+                  <span id="star-count">{movie.movieStarCount}</span>
                 </div>
                 <div className="favourite">
                   <button id="fav-btn">Add to Favourites</button>

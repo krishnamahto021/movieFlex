@@ -1,11 +1,12 @@
-import Movie from "./MovieFlex";
+import MovieList from "./MovieList";
 import NavBar from "./NavBar";
+
 
 function App() {
   return (
     <>
     <NavBar/>
-    <Movie/>
+    <MovieList/>
     </>
   );
 }
