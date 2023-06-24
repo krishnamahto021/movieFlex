@@ -3,7 +3,8 @@ import "./movieFlex.css";
 class Movie extends Component {
 
   render() {
-    const { movie, increaseStar, decreaseStar } = this.props;
+    const { movie, increaseStar, decreaseStar ,toggleFav,toggleCart} = this.props;
+
     return (
       <>
         <div className="movie-list">
@@ -51,11 +52,11 @@ class Movie extends Component {
                   />
                   <span id="star-count">{movie.movieStarCount}</span>
                 </div>
-                <div className="favourite">
-                  <button id="fav-btn">Add to Favourites</button>
+                <div className="favourite" >
+                <button id={movie.isFav ? 'fav':'unFav'}className="btn" onClick={toggleFav}> {movie.isFav?'Favourite':'Unfavourite'}  </button>
                 </div>
-                <div className="buy">
-                  <button id="buy-btn">Buy</button>
+                <div className="add-to-cart" >
+                  <button id={movie.isAddToCart?'addCart':'undoAddCart'} className="btn" onClick={toggleCart}>{movie.isAddToCart?'Add to Cart':'Remove'}  </button>
                 </div>
               </div>
             </div>
@@ -65,5 +66,7 @@ class Movie extends Component {
     );
   }
 }
+
+
 
 export default Movie;

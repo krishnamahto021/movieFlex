@@ -12,22 +12,28 @@ class MovieList extends Component {
                     moviePrice: 99,
                     movieRating: 0,
                     movieStarCount: 0,
+                    isFav:true,
+                    isAddToCart:true,
                     img: 'https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg',
                 },
                 {
                     movieTitle: "Captain America",
-                    moviePlot: "The remaining Avengers team up to reverse the devastating effects of Thanos snap and restore balance to the universe",
+                    moviePlot: "A patriotic super-soldier fights against evil forces to protect the world and uphold justice",
                     moviePrice: 49,
                     movieRating: 0,
                     movieStarCount: 0,
+                    isFav:true,
+                    isAddToCart:true,
                     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdHlDCWUqPTcc0tnTs0kS7ugXTf-E_jcku_OmH6ns&s'
                 },
                 {
-                    movieTitle: "Iron Man",
-                    moviePlot: "The remaining Avengers team up to reverse the devastating effects of Thanos snap and restore balance to the universe",
+                    movieTitle: "",
+                    moviePlot: "A brilliant billionaire inventor uses a high-tech suit to become a superhero and defend humanity from threats",
                     moviePrice: 199,
                     movieRating: 0,
                     movieStarCount: 0,
+                    isFav:true,
+                    isAddToCart:true,
                     img: 'https://i.etsystatic.com/35330351/r/il/62b946/3917240214/il_fullxfull.3917240214_n3ti.jpg'
 
                 }
@@ -58,9 +64,27 @@ class MovieList extends Component {
         this.setState({
             moviesArray: moviesArray
         })
+    }
 
+    toggleFav = (index)=> {
+        const {moviesArray} = this.state;
+        moviesArray[index].isFav = !moviesArray[index].isFav;
+        this.setState({
+            moviesArray:moviesArray
+        })      
 
     }
+
+    toggleCart = (index)=> {
+        const {moviesArray} = this.state;
+        moviesArray[index].isAddToCart = !moviesArray[index].isAddToCart;
+        this.setState({
+            moviesArray:moviesArray
+        })      
+
+    }
+
+ 
 
 
 
@@ -69,12 +93,13 @@ class MovieList extends Component {
         return (
             <>
                 {moviesArray.map((movie, index) => (
-                    <Movie movie={movie} increaseStar={this.increaseStar} key={index} decreaseStar={() => this.decreaseStar(index)} />
+                    <Movie movie={movie} increaseStar={this.increaseStar} key={index} decreaseStar={() => this.decreaseStar(index)} toggleFav = {()=>this.toggleFav(index)} toggleCart={()=>this.toggleCart(index)}  />
                 ))}
             </>
         )
     }
 
 }
+
 
 export default MovieList;

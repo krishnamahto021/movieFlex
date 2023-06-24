@@ -90,39 +90,38 @@
 }
 
 .favourite{
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-right: 4rem;
 }
 
-.buy{
+.add-to-cart{
     margin-left: 2.8rem;
 }
 
-#fav-btn{
-    background-color: #1877f2;
+.btn{
     border: none;
     border-radius: 6px;
     font-size: 18px;
     line-height: 40px;
     padding: 0 16px;
-    width: 203px;
     display: block;
     margin-top: 0.8rem;
     color: white;
     font-weight: bolder;
 }
 
-#buy-btn{
+#fav{
     background-color: #1877f2;
-    border: none;
-    border-radius: 6px;
-    font-size: 18px;
-    line-height: 40px;
-    padding: 0 16px;
-    width: 70px;
-    display: block;
-    margin-top: 0.8rem;
-    color: white;
-    font-weight: bolder;
+}
+
+#unFav{
+    background-color: rgba(255, 0, 0, 0.794);
+}
+
+#addCart{
+    background-color: #1877f2;
+}
+
+#undoAddCart{
+    background-color: rgba(255, 0, 0, 0.794);
 }
 
