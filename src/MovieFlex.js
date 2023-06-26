@@ -67,6 +67,17 @@ class Movie extends Component {
   }
 }
 
-
+Movie.defaultProps = {
+    movie: {
+      movieTitle: "Default Movie Title",
+      moviePlot: "Default Movie Plot",
+      moviePrice: 0,
+      movieRating: 0,
+      movieStarCount: 0,
+      isFav: false,
+      isAddToCart: false,
+      img: "",
+    },
+  };
 
 export default Movie;
