@@ -3,8 +3,7 @@ import "./movieFlex.css";
 class Movie extends Component {
 
   render() {
-    const { movie, increaseStar, decreaseStar ,toggleFav,toggleCart} = this.props;
-
+    const { movie, increaseStar, decreaseStar ,toggleFav,toggleCartCount} = this.props;
     return (
       <>
         <div className="movie-list">
@@ -53,10 +52,10 @@ class Movie extends Component {
                   <span id="star-count">{movie.movieStarCount}</span>
                 </div>
                 <div className="favourite" >
-                <button id={movie.isFav ? 'fav':'unFav'}className="btn" onClick={toggleFav}> {movie.isFav?'Favourite':'Unfavourite'}  </button>
+                <button id={movie.isFav ? 'fav':'unFav'}className="btn" onClick={toggleFav} > {movie.isFav?'Favourite':'Unfavourite'}  </button>
                 </div>
                 <div className="add-to-cart" >
-                  <button id={movie.isAddToCart?'addCart':'undoAddCart'} className="btn" onClick={toggleCart}>{movie.isAddToCart?'Add to Cart':'Remove'}  </button>
+                  <button id={movie.isAddToCart?'addCart':'undoAddCart'} className="btn" onClick={toggleCartCount}>{movie.isAddToCart?'Add to Cart':'Remove'}  </button>
                 </div>
               </div>
             </div>
