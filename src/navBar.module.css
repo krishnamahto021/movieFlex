@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navBar{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.title{
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
+    margin-left: 7px;
+}
+
+.cart{
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+#cartImage{
+    height: 40px;
+}
+
+.cartCount{
+    margin-top: -40px;
+    font-weight: bold;
+}
